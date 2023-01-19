@@ -1,12 +1,16 @@
+import ClientStuff from "./clientStuff";
+import DynamicStuff from "./dynamicStuff";
+import StaticStuff from "./staticStuff";
+
 export default async function Page() {
-
-    const staticData = await fetch(`https://api.tvmaze.com/shows/81`, { cache: 'force-cache' });
-
 
     return (
         <>
-            <h1>I am the other page</h1>
-            
+            {/* @ts-expect-error Server Component */}
+            <StaticStuff />
+            {/* @ts-expect-error Server Component */}
+            <DynamicStuff />  
+            <ClientStuff />
         </>
     )
 }
