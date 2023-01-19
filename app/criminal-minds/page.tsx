@@ -1,16 +1,16 @@
-import ClientStuff from "./clientStuff";
-import DynamicStuff from "./dynamicStuff";
-import StaticStuff from "./staticStuff";
+import ClientComponent from "./clientComponent";
+import DynamicComponent from "./dynamicComponent";
+import StaticComponent from "./staticComponent";
 
 export default async function Page() {
 
     return (
         <>
             {/* @ts-expect-error Server Component */}
-            <StaticStuff />
+            <StaticComponent />
             {/* @ts-expect-error Server Component */}
-            <DynamicStuff />  
-            <ClientStuff />
+            <DynamicComponent />  
+            <ClientComponent />
         </>
     )
 }
